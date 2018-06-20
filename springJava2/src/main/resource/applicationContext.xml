@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!-- applicationContext.xml -->
+
+	<!-- <bean id="md03" class="com.bit.spring04.springJava2.Module03">
+		주입되는 값의 순서와 상관없이 인자 순서에 따라 출력
+		<constructor-arg value="HI"></constructor-arg>
+		<constructor-arg value="반갑습니다."></constructor-arg>
+	</bean> -->
+	
+	<!-- 
+	<bean id="moduleInter" class="com.bit.spring04.springJava2.Module01"></bean>
+	<bean id="moduleInter" class="com.bit.spring04.springJava2.Module02"></bean>
+	<bean id="moduleInter" class="com.bit.spring04.springJava2.Module03">
+		<constructor-arg value="aaa"></constructor-arg>
+		<constructor-arg value="bbb"></constructor-arg>
+	</bean>
+	 -->
+	<bean id="moduleInter" class="com.bit.spring04.springJava2.Module03">
+		<property name="alist">
+			<!-- 
+			<props>
+				<prop key=""></prop>
+			</props>	
+
+			<map>
+				<entry><key></key><value></value></entry>
+			</map>
+			-->
+			
+			<list>
+				<value>aaa</value>
+				<value>bbb</value>
+				<value>ccc</value>
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="front" class="com.bit.spring04.springJava2.FrontModule">
+		<constructor-arg ref="moduleInter"></constructor-arg>
+	</bean>
+
+</beans>
