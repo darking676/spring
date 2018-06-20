@@ -14,6 +14,7 @@
 <script type="text/javascript">
 	$(document).ready(function() {
 		$('.collapse').collapse();
+// 		$('#myModal').modal('shown.bs.modal');
 		
 // 		$('#myModal').on('shown.bs.modal', function () {
 // 			  $('#myInput').focus()
@@ -78,7 +79,7 @@
 		<button class="btn btn-danger">삭제</button>
 	</form>
 	<!-- Button trigger modal -->
-	<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
 	  modal
 	</button>
 	
